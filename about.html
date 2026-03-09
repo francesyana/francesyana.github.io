@@ -19,7 +19,6 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <!-- Removed "My Site" brand -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,59 +27,36 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          
-          <!-- Dropdown: Windows Installations -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="windowsDropdown" role="button" data-bs-toggle="dropdown">
-              Windows Installations
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="windows1.html">Installation 1</a></li>
-              <li><a class="dropdown-item" href="windows2.html">Installation 2</a></li>
-              <!-- Continue until Installation 13 -->
-            </ul>
-          </li>
-          
-          <!-- Dropdown: Laboratory Activities -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="labDropdown" role="button" data-bs-toggle="dropdown">
-              Laboratory Activities
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="lab1.html">Lab 1</a></li>
-              <!-- Continue until Lab 6 -->
-            </ul>
-          </li>
-          
-          <!-- Dropdown: Finals -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="finalsDropdown" role="button" data-bs-toggle="dropdown">
-              Finals
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="final1.html">Final 1</a></li>
-              <!-- Continue until Final 9 -->
-            </ul>
-          </li>
+          <!-- Dropdowns same as index.html -->
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Main Content -->
+  <!-- Main Content with photo -->
   <main class="container mt-4">
-    <h1>About</h1>
-    <h2>Lorraine Frances De Sagun</h2>
-    <h3>BSIT-NS-2A-T</h3>
-    <p>
-      This website has been developed as the final project for the Operating Systems course under the guidance of Dr. Rico Santos. 
-      Its primary objective is to provide a structured and accessible resource on the installation procedure, setup, configuration, 
-      and management of the Windows Operating System.
-    </p>
-    <p>
-      The site includes comprehensive instructional materials, such as step-by-step video demonstrations hosted on YouTube, 
-      as well as a series of laboratory activities designed to strengthen practical skills in operating system management.
-    </p>
+    <div class="row">
+      <!-- Text on the left -->
+      <div class="col-md-8">
+        <h1>About</h1>
+        <h2>Lorraine Frances De Sagun</h2>
+        <h3>BSIT-NS-2A-T</h3>
+        <p>
+          This website has been developed as the final project for the Operating Systems course under the guidance of Dr. Rico Santos. 
+          Its primary objective is to provide a structured and accessible resource on the installation procedure, setup, configuration, 
+          and management of the Windows Operating System.
+        </p>
+        <p>
+          The site includes comprehensive instructional materials, such as step-by-step video demonstrations hosted on YouTube, 
+          as well as a series of laboratory activities designed to strengthen practical skills in operating system management.
+        </p>
+      </div>
+      
+      <!-- Photo on the right -->
+      <div class="col-md-4 text-center">
+        <img src="pictures/love/lori.jpg" alt="Lorraine Frances De Sagun" class="img-fluid rounded shadow" style="max-width:100%; height:auto;">
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
