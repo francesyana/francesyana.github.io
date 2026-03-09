@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <title>Welcome</title>
+  <meta charset="UTF-8">
+  <title>Frances GitHub Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-   <h1>Hello, World!</h1>
-   <p>Welcome to my GitHub Pages site.</p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">My Site</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Windows Installations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="windows1.html">Installation 1</a></li>
+              <li><a class="dropdown-item" href="windows2.html">Installation 2</a></li>
+              <!-- Repeat until Installation 13 -->
+            </ul>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="labDropdown" role="button" data-bs-toggle="dropdown">
+              Laboratory Activities
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="lab1.html">Lab 1</a></li>
+              <li><a class="dropdown-item" href="lab2.html">Lab 2</a></li>
+              <!-- Repeat until Lab 6 -->
+            </ul>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="finalsDropdown" role="button" data-bs-toggle="dropdown">
+              Finals
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="final1.html">Final 1</a></li>
+              <li><a class="dropdown-item" href="final2.html">Final 2</a></li>
+              <!-- Repeat until Final 9 -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container mt-4">
+    <h1>Welcome to My GitHub Site</h1>
+    <p>This is the homepage. Explore the dropdown menus for installations, labs, and finals.</p>
+    
+    <!-- Example YouTube Embed -->
+    <div class="ratio ratio-16x9">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="YouTube video" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
