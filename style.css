@@ -1,0 +1,57 @@
+/* General background and text */
+body {
+  background-color: #ffeef6; /* pastel pink background */
+  color: #333; /* dark gray text for readability */
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #ffb6c1 !important; /* light pastel pink */
+}
+
+.navbar .nav-link {
+  color: #fff !important; /* white text */
+}
+
+.navbar .nav-link:hover {
+  background-color: #ff99aa; /* slightly darker pink hover */
+  border-radius: 5px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  background-color: #ffe4ec; /* very light pink */
+}
+
+.dropdown-item {
+  color: #333;
+}
+
+.dropdown-item:hover {
+  background-color: #ffccd5; /* hover effect */
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #d6336c; /* deep pink accent */
+}
+
+/* Buttons */
+.btn-custom {
+  background-color: #ffb6c1;
+  color: #fff;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #ff99aa;
+}
+
+/* YouTube video container */
+.ratio {
+  border: 3px solid #ffb6c1;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #fff;
+}
