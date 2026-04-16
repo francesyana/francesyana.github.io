@@ -87,12 +87,36 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="container mt-5 text-center">
-    <h1>Windows NT Installation</h1>
-    <p>
-      This section provides a step-by-step demonstration of installing Windows NT.  
+  <main class="container mt-5">
+    <h1 class="text-center">Windows NT 4 Installation</h1>
+    <p class="text-center">
+      This section provides a step-by-step demonstration of installing Windows NT 4.  
       Watch the instructional video below to follow along with the process.
     </p>
+
+    <!-- Step-by-step list -->
+    <h3 class="mt-4">Steps</h3>
+    <ol class="text-start">
+      <li>Create a new VM.</li>
+      <li>Set Base Memory to 256 MB.</li>
+      <li>Add ISO: SP1.</li>
+      <li>Add a Floppy Controller → then add floppy disk 1.</li>
+      <li>In Settings → System → Acceleration → disable nested paging.</li>
+      <li>Start VM.</li>
+      <li>Enter → Enter → Continue → Page Down → F8 to agree → Enter → Enter → Format partition (NTFS) → Enter → wait → Enter → Enter → wait for setup to copy files → remove disk → Enter to restart → wait.</li>
+      <li>After restart, system asks for disk → insert ISO file again (SP1).</li>
+      <li>Click OK → Next → add disk again if missing → Typical → Next → Name: EndUser → Org: EndUser → Computer name: WIN NT 4 → Next → Password → Next → select NO → Next → Install → Next → Next.</li>
+      <li>Networking: Next → Start Search → Next → leave TCP protocol checked → Next → Continue → Yes to DHCP → Next → Yes to Network → Name: NT 4 → OK → Next → Finish.</li>
+      <li>Timezone: Beijing → Close → OK.</li>
+      <li>Display: customize settings → Test → OK → Yes → OK → wait.</li>
+      <li>Remove Disk/ISO → Restart.</li>
+      <li>Choose 1 → wait → log in.</li>
+      <li>Install Service Pack: add SP6 ISO → SP6 tab appears → close tab → go to Computer → select SP6 drive → Install SP6 → choose Intel-based system → Open → Accept → Install.</li>
+      <li>After install, remove SP6 ISO → Restart → log in.</li>
+      <li>Verify SP6: Computer → Properties or run <code>winver</code>.</li>
+      <li>Add Guest Additions: Devices → Add Guest Additions → Next → Install → Finish → Restart → log in.</li>
+      <li>Add SP1 ISO again → Start → Settings → Control Panel → Multimedia → Devices → Audio Devices → Add → Creative Labs Sound Blaster → OK → Continue → modify MPU I/O Address to disable → OK → Restart.</li>
+    </ol>
 
     <div class="ratio ratio-16x9 mt-4">
       <iframe src="https://www.youtube.com/embed/"

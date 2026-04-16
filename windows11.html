@@ -88,12 +88,45 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="container mt-5 text-center">
-    <h1>Windows 11 Installation</h1>
-    <p>
+  <main class="container mt-5">
+    <h1 class="text-center">Windows 11 Installation</h1>
+    <p class="text-center">
       This section provides a step-by-step demonstration of installing Windows 11.  
       Watch the instructional video below to follow along with the process.
     </p>
+
+    <!-- Step-by-step list -->
+    <h3 class="mt-4">Windows 11 Installation Steps</h3>
+    <ol class="text-start">
+      <li>Create a new VM.</li>
+      <li>Add ISO file.</li>
+      <li>Start VM.</li>
+      <li>If boot error occurs: power off → Settings → System → uncheck “Enable UEFI.”</li>
+      <li>Start VM again.</li>
+      <li>Next → Next → I agree → Next → “I don’t have product key” → choose Windows 11 Pro → Next.</li>
+      <li>If error “doesn’t meet requirements” appears → Close → Reset machine.</li>
+      <li>After restart, press <kbd>Shift + F10</kbd>.</li>
+      <li>Type <code>regedit</code>.</li>
+      <li>Navigate to <code>HKEY_LOCAL_MACHINE → Setup</code> → right‑click → New → Key → name it <code>LabConfig</code>.</li>
+      <li>Inside LabConfig: right‑click → New → DWORD (32‑bit) Value → <code>BypassTPMCheck</code>.</li>
+      <li>Create another DWORD (32‑bit) Value → <code>BypassSecureBootCheck</code>.</li>
+      <li>Right‑click each → Modify → set Value Data to 1.</li>
+      <li>Close Registry Editor and Command Prompt.</li>
+      <li>Proceed again with installation (Step 6).</li>
+      <li>Select Windows 11 Pro → Accept agreements → Next → Install.</li>
+      <li>Country/Region: Philippines.</li>
+      <li>Keyboard Layout: US.</li>
+      <li>Skip additional keyboard setup.</li>
+      <li>Wait for setup.</li>
+      <li>Device name: Admin-PC.</li>
+      <li>Wait for configuration.</li>
+      <li>Setup for Personal Use.</li>
+      <li>Wait for downloading.</li>
+      <li>Sign in with Microsoft Account → set PIN.</li>
+      <li>Privacy Settings: turn off Location and Find My Device.</li>
+      <li>Accept → wait → More options → Set up as new PC → wait.</li>
+      <li>Skip → Skip → Skip → Decline → Decline → Skip for now.</li>
+    </ol>
 
     <div class="ratio ratio-16x9 mt-4">
       <iframe src="https://www.youtube.com/embed/NOT_A_REAL_VIDEO"
