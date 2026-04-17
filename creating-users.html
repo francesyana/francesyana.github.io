@@ -86,19 +86,39 @@
     </div>
   </nav>
 
-  <main class="container mt-5 text-center">
-    <h1>Active Directory: Creating Users</h1>
-    <p>
-      This section presents mass user creation in Windows Server 2008 via PowerShell scripts and text files.  
-      <ol class="text-start">
-        <li>- Create User Accounts of all BSIT Students (1st to 4th year) with common passwords.</li>
-        <li>- Group the students according to their section.</li>
-        <li>- Your account belongs to Administrators.</li>
-        <li>  </li>
-        <li>Domain: bsit.com</li>
-        <li>Common password: Student12345</li>
-      </ol>
-    </p>
+<!-- Main Content -->
+<main class="container mt-5 text-center">
+  <h1>Active Directory: Creating Users</h1>
+  <p>
+    This section presents <strong>mass user creation in Windows Server 2008</strong> via PowerShell scripts and text files.  
+  </p>
+
+  <!-- Requirements -->
+  <h3 class="mt-4">Requirements</h3>
+  <ol class="text-start">
+    <li>Create user accounts for all BSIT students (1st to 4th year) with a common password.</li>
+    <li>Group the students according to their section.</li>
+    <li>Your account belongs to Administrators.</li>
+    <li>Domain: <strong>bsit.com</strong></li>
+    <li>Common password: <strong>Student12345</strong></li>
+  </ol>
+
+  <!-- Step-by-step list -->
+  <h3 class="mt-4">Steps</h3>
+  <ol class="text-start">
+    <li>Prepare a text file containing student names grouped by section.</li>
+    <li>Open Windows Server 2008 → Start → Administrative Tools → Active Directory Users and Computers.</li>
+    <li>Create Organizational Units (OUs) for each year level and section.</li>
+    <li>Use PowerShell to automate user creation:
+      <ul>
+        <li>Import the text file with student names.</li>
+        <li>Run a script to create accounts under the domain <strong>bsit.com</strong>.</li>
+        <li>Assign the common password <strong>Student12345</strong> to all accounts.</li>
+      </ul>
+    </li>
+    <li>Verify that each student account is created and grouped correctly.</li>
+    <li>Ensure your administrator account is part of the <strong>Administrators</strong> group.</li>
+  </ol>
 
     <div class="ratio ratio-16x9 mt-4">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/Q4EljajAHhc?si=fpLjGL_yTVPow7lX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
