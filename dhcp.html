@@ -87,11 +87,104 @@
 
   <!-- Main Content -->
   <main class="container mt-5 text-center">
-    <h1>Laboratory: DHCP</h1>
+    <h1>Activity 3 & 4</h1>
     <p>
-      This section demonstrates configure <strong>DHCP Server</strong> for Windows Server 2008.
+      This section presents <strong>Configuring DHCP Server for Windows Server 2008</strong> and connecting it to Windows XP & Windows 7.  
     </p>
 
+    <!-- Scopes -->
+    <h3 class="mt-4">Scopes</h3>
+    <ul class="text-start">
+      <li>Male network: 10.0.0.0 /8</li>
+      <li>Female network: 172.16.0.0 /16</li>
+      <li>Server: Last usable IP address</li>
+      <li>Exclude: First & last 10 usable IP addresses</li>
+      <li>Lease Time: 16 hours</li>
+      <li>Router: Server IP address</li>
+      <li>DNS: Server IP address (8.8.8.8)</li>
+    </ul>
+
+    <!-- Requirements -->
+    <h3 class="mt-4">Requirements</h3>
+    <ol class="text-start">
+      <li>Create client OS: 1 Windows XP (<strong>LASTNAME-XP</strong>) and 1 Windows 7 (<strong>LASTNAME-WIN7</strong>).</li>
+      <li>Connect both client OS to the Windows Server Domain using DHCP.</li>
+      <li>Windows 7 (Male network) → 10.0.0.0 /8 → Class B IP addresses only.</li>
+      <li>Windows XP (Female network) → 172.16.0.0 /16 → Class A IP addresses only.</li>
+      <li>Login 5 student accounts per section per OS.</li>
+    </ol>
+
+    <!-- Step-by-step list -->
+    <h3 class="mt-4">Steps</h3>
+    <ol class="text-start">
+      <li>Clone Windows Server 2008.</li>
+      <li>Clone Windows 7 and Windows XP.</li>
+      <li>Configure WS2008 network adapters: Adapter 1 & Adapter 2 → Internal Network.</li>
+      <li>Configure Windows 7 and XP network adapters: Adapter 1 → Internal Network.</li>
+      <li>Start WS2008.</li>
+      <li>Configure Networking:
+        <ul>
+          <li>(Male) Local Area Connection 1: IP 10.0.0.254, Subnet 255.255.255.0, Gateway 10.0.0.1, DNS 127.0.0.1.</li>
+          <li>(Female) Local Area Connection 2: IP 172.16.0.126, Subnet 255.255.255.128, Gateway 0.0.0.0, DNS 127.0.0.1.</li>
+        </ul>
+      </li>
+      <li>Add DHCP Role: Start → Administrative Tools → Server Manager → Roles → Add Roles → DHCP Server. Validate DNS (127.0.0.1) → Alternate DNS: 8.8.8.8 → Install.</li>
+      <li>Configure DHCP Scopes:
+        <ul>
+          <li><strong>Scope Name: Class A Male</strong>
+            <ul>
+              <li>Range: 10.0.0.1 – 10.0.0.254</li>
+              <li>Subnet mask: 255.255.255.0</li>
+              <li>Exclusions: 10.0.0.1–10.0.0.10 and 10.0.0.245–10.0.0.254</li>
+              <li>Lease: 16 hours</li>
+              <li>Default gateway: 10.0.0.254</li>
+              <li>Domain: bsit.com</li>
+            </ul>
+          </li>
+          <li><strong>Scope Name: Class B Female</strong>
+            <ul>
+              <li>Range: 172.16.0.1 – 172.16.0.126</li>
+              <li>Subnet mask: 255.255.255.128</li>
+              <li>Exclusions: 172.16.0.1–172.16.0.10 and 172.16.0.117–172.16.0.126</li>
+              <li>Lease: 16 hours</li>
+              <li>Default gateway: 172.16.0.126</li>
+              <li>Domain: bsit.com</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Configure DNS:
+        <ul>
+          <li>Class A: Default gateway 10.0.0.254, Alternate DNS 8.8.8.8.</li>
+          <li>Class B: Default gateway 172.16.0.126, Alternate DNS 8.8.8.8.</li>
+        </ul>
+      </li>
+      <li>Configure Windows XP:
+        <ul>
+          <li>Rename computer to LASTNAME-XP.</li>
+          <li>Join domain: bsit.com.</li>
+          <li>Authenticate with WS2008 Administrator credentials.</li>
+          <li>Restart and log in via domain.</li>
+        </ul>
+      </li>
+      <li>Configure Windows 7:
+        <ul>
+          <li>Rename computer to LASTNAME-WIN7.</li>
+          <li>Join domain: bsit.com.</li>
+          <li>Authenticate with WS2008 Administrator credentials.</li>
+          <li>Restart and log in via domain.</li>
+        </ul>
+      </li>
+      <li>Verify DHCP leases:
+        <ul>
+          <li>WS2008 → Administrative Tools → DHCP → IPv4 → Address Leases.</li>
+          <li>Check W7 lease in Class A Male scope.</li>
+          <li>Check WXP lease in Class B Female scope.</li>
+          <li>Run <code>ipconfig /all</code> in W7 and WXP to confirm DHCP assignment.</li>
+        </ul>
+      </li>
+      <li>Login 5 student accounts per section per OS.</li>
+    </ol>
 
     <div class="ratio ratio-16x9 mt-4">
       <iframe src="https://www.youtube.com/embed/NOT_A_REAL_VIDEO"

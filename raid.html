@@ -87,16 +87,71 @@
 
   <!-- Main Content -->
   <main class="container mt-5 text-center">
-    <h1>Laboratory: RAID Installation</h1>
+    <h1>RAID</h1>
     <p>
-      RAID Installation: configure RAID in Windows Server 2008 Hard Disks.
+      This section presents <strong>Performing RAID Installation in Windows Server 2008</strong>.  
     </p>
-    <p>
-      Perform the RAID Installation:<br>
-      <strong>RAID 0:</strong> Stripped Volume<br>
-      <strong>RAID 1:</strong> Mirrored Volume<br>
-      <strong>RAID 5:</strong> Spanned Volume
-    </p>
+
+    <!-- Requirements -->
+    <h3 class="mt-4">Requirements</h3>
+    <ul class="text-start">
+      <li>RAID 0: Stripped Volume</li>
+      <li>RAID 1: Mirrored Volume</li>
+      <li>RAID 5</li>
+      <li>Spanned Volume</li>
+    </ul>
+
+    <!-- Step-by-step list -->
+    <h3 class="mt-4">Steps</h3>
+    <ol class="text-start">
+      <li>Clone Windows Server 2008 used for DHCP activity.</li>
+      <li>Click Settings → Storage → Add attachment icon → Hard Disk.</li>
+      <li>In medium selector: Click Create → Check Pre-allocate full size → Allocate 50 MB → Click Finish.</li>
+      <li>Create 10 of these hard disks.</li>
+      <li>Back to Settings → Storage → Attach all 10 hard disks to WS2008.</li>
+      <li>Start WS2008.</li>
+      <li>Click Start → Administrative Tools → Server Manager → Expand Storage → Disk Management.</li>
+      <li>Initialize Disk dialog appears → Ensure MBR partition style → Click OK to initialize all disks.</li>
+      <li>After initialization, Disk 0 (main VM storage) plus 10 additional disks (Disk 1–10) are ready for RAID configuration.</li>
+
+      <li>RAID 0: Stripped Volume
+        <ul>
+          <li>Click Disk 1 → New Stripped Volume.</li>
+          <li>Next → Select Disk 2 → Add → Next.</li>
+          <li>Name volume: RAID0 or Stripped.</li>
+          <li>Check “Perform a quick format” → Next → Finish → Yes if prompted → Wait.</li>
+        </ul>
+      </li>
+
+      <li>RAID 1: Mirrored Volume
+        <ul>
+          <li>Click Disk 3 → New Mirrored Volume.</li>
+          <li>Next → Select Disk 4 → Add → Next.</li>
+          <li>Name volume: RAID1 or Mirrored.</li>
+          <li>Check “Perform a quick format” → Next → Finish → Yes if prompted → Wait.</li>
+        </ul>
+      </li>
+
+      <li>Spanned Volume
+        <ul>
+          <li>Click Disk 5 → New Spanned Volume.</li>
+          <li>Next → Select Disk 6 → Add → Select Disk 7 → Add → Next.</li>
+          <li>Name volume: Spanned.</li>
+          <li>Check “Perform a quick format” → Next → Finish → Yes if prompted → Wait.</li>
+        </ul>
+      </li>
+
+      <li>RAID 5
+        <ul>
+          <li>Click Disk 8 → New RAID 5 Volume.</li>
+          <li>Next → Select Disk 9 → Add → Select Disk 10 → Add → Next.</li>
+          <li>Name volume: RAID5.</li>
+          <li>Check “Perform a quick format” → Next → Finish → Yes if prompted → Wait.</li>
+        </ul>
+      </li>
+
+      <li>After all volumes are created, check the status of each volume in Disk Management.</li>
+    </ol>
 
     <div class="ratio ratio-16x9 mt-4">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/EEWxzi0yYcE?si=oi7LQnlgyGtehULQ" 

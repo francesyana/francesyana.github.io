@@ -87,10 +87,57 @@
 
   <!-- Main Content -->
   <main class="container mt-5 text-center">
-    <h1>Laboratory: File Server</h1>
+    <h1>File Server Configuration</h1>
     <p>
-      File Server in Windows Server 2008.
+      This section presents <strong>Installing and Configuring File Services in Windows Server 2008</strong> to establish a centralized storage system for domain users. A file server allows multiple users to store, access, and manage files securely, while administrators control permissions and enforce file restrictions. File servers are widely used in schools, companies, and organizations to manage shared resources efficiently.
     </p>
+
+    <!-- Tasks Performed -->
+    <h3 class="mt-4">Tasks Performed</h3>
+    <ul class="text-start">
+      <li>Install the File Services Role.</li>
+      <li>Create shared folders with specific permissions and file restrictions.</li>
+      <li>Configure File Services to manage shared folders and permissions.</li>
+    </ul>
+
+    <!-- Shared Folders -->
+    <h3 class="mt-4">Created Shared Folders</h3>
+    <ul class="text-start">
+      <li><strong>Public Folder</strong>
+        <ul>
+          <li>Permissions: Read / Write</li>
+          <li>Users: All</li>
+          <li>Allowed Files: All except *.exe, *.com, *.vb, *.vbs</li>
+        </ul>
+      </li>
+      <li><strong>VB.Net Folder</strong>
+        <ul>
+          <li>Permissions: Read / Write</li>
+          <li>Allowed Files: *.zip, *.rar</li>
+        </ul>
+      </li>
+      <li><strong>C_Programs Folder</strong>
+        <ul>
+          <li>Permissions: Read / Write</li>
+          <li>Allowed Files: *.c, *.cpp</li>
+        </ul>
+      </li>
+      <li><strong>Surname_Section Folder</strong>
+        <ul>
+          <li>Permissions: Full Control</li>
+          <li>Users: Domain Users</li>
+          <li>Allowed Files: *.c, *.cpp, *.pdf, *.rar, *.docx, *.ppt, *.dwg</li>
+        </ul>
+      </li>
+      <li><strong>PHOTO_Male & PHOTO_Female</strong>
+        <ul>
+          <li>Permissions: Read / Write</li>
+          <li>Access based on user gender</li>
+          <li>Allowed Files: *.jpg, *.gif, *.png</li>
+        </ul>
+      </li>
+    </ul>
+
     <div class="ratio ratio-16x9 mt-4">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/PAsycwWenXM?si=ZhKAbnWBM9uupwr3" 
       title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

@@ -87,10 +87,73 @@
 
   <!-- Main Content -->
   <main class="container mt-5 text-center">
-    <h1>Laboratory: Group Policy</h1>
+    <h1>Group Policy Management</h1>
     <p>
-      Group Policy Management
+      This section presents <strong>Configuring Group Policy Management in Windows Server 2008</strong>.  
     </p>
+
+    <!-- Initial Setup Steps -->
+    <h3 class="mt-4">Initial Setup Steps</h3>
+    <ol class="text-start">
+      <li>Go to Start → Administrative Tools → Active Directory Users and Computers.</li>
+      <li>Create a new Organizational Unit → BSIT.</li>
+      <li>Add all students to the Organizational Unit.</li>
+      <li>Go to Start → Administrative Tools → Group Policy Management.</li>
+      <li>Navigate to Domain → View the OU of Students.</li>
+      <li>Right-click the OU → Create a GPO in this domain → Add GPOs needed for your system.</li>
+      <li>After creating the GPO → Right-click the GPO → Edit, then follow the steps below for each requirement.</li>
+    </ol>
+
+    <!-- User Configuration Policies -->
+    <h3 class="mt-4">User Configuration Policies</h3>
+    <p><strong>GPO Name: User Interface Restrictions</strong></p>
+    <ul class="text-start">
+      <li>Remove links and access to Windows Update → Enabled</li>
+      <li>Remove Network Connections from the Start Menu → Enabled</li>
+      <li>Remove Help menu from the Start Menu → Enabled</li>
+      <li>Remove Run menu from the Start Menu → Enabled</li>
+      <li>Remove My Pictures icon from the Start Menu → Enabled</li>
+      <li>Remove My Music icon from the Start Menu → Enabled</li>
+      <li>Remove My Network Places icon from the Start Menu → Enabled</li>
+      <li>Add "Logoff" on the Start Menu → Enabled</li>
+      <li>Remove Task Manager from CTRL+ALT+DEL → Enabled</li>
+    </ul>
+
+    <p><strong>GPO Name: Internet Explorer Settings</strong></p>
+    <ul class="text-start">
+      <li>Internet Explorer Browser Title – Title Bar Text → &lt;domain name&gt;</li>
+    </ul>
+
+    <p><strong>GPO Name: Windows Update</strong></p>
+    <ul class="text-start">
+      <li>Prohibit access to properties of components of a LAN connection → Enabled</li>
+      <li>Prevent access to the command prompt → Enabled</li>
+      <li>Prevent access to registry editing tools → Enabled</li>
+      <li>Prohibit access to the Control Panel → Enabled</li>
+    </ul>
+
+    <!-- Computer Configuration Policies -->
+    <h3 class="mt-4">Computer Configuration Policies</h3>
+    <p><strong>GPO Name: Admin Interface Restrictions</strong></p>
+    <ul class="text-start">
+      <li>Remove links and access to Windows Update → Disabled</li>
+      <li>Remove Network Connections from the Start Menu → Disabled</li>
+      <li>Remove Help menu from the Start Menu → Disabled</li>
+      <li>Remove Run menu from the Start Menu → Disabled</li>
+      <li>Remove My Pictures icon from the Start Menu → Disabled</li>
+      <li>Remove My Music icon from the Start Menu → Disabled</li>
+      <li>Remove My Network Places icon from the Start Menu → Disabled</li>
+      <li>Add "Logoff" on the Start Menu → Disabled</li>
+      <li>Remove Task Manager from CTRL+ALT+DEL → Disabled</li>
+    </ul>
+
+    <p><strong>GPO Name: Admin Windows Update</strong></p>
+    <ul class="text-start">
+      <li>Prohibit access to properties of components of a LAN connection → Disabled</li>
+      <li>Prevent access to the command prompt → Disabled</li>
+      <li>Prevent access to registry editing tools → Disabled</li>
+      <li>Prohibit access to the Control Panel → Disabled</li>
+    </ul>
 
     <div class="ratio ratio-16x9 mt-4">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/OJjUhB1vDeg?si=AyVMZLYYAad_6En0" 
