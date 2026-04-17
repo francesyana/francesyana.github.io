@@ -85,12 +85,61 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="container mt-5 text-center">
-    <h1>Case Study Part 5</h1>
-    <p>
-      This section presents <strong>Case Study Part 5: RAID</strong>.  
-    </p>
+<!-- Main Content -->
+<main class="container mt-5 text-center">
+  <h1>Case Study Part 5</h1>
+  <p>
+    This section presents <strong>Case Study Part 5: RAID Installation</strong>.  
+  </p>
+
+  <!-- Step-by-step list -->
+  <h3 class="mt-4">Steps</h3>
+  <ol class="text-start">
+    <li>Clone the Windows Server 2008 VM used in the DHCP activity.</li>
+    <li>Open Settings → Storage → click the add attachment icon → Hard Disk.</li>
+    <li>In the medium selector, click Create → check pre-allocate full size → allocate 50 MB → Finish.</li>
+    <li>Create 10 of these hard disks.</li>
+    <li>Back in Settings → Storage → attach all 10 hard disks to the WS2008 VM.</li>
+    <li>Start WS2008.</li>
+    <li>Click Start → Administrative Tools → Server Manager → expand Storage → Disk Management.</li>
+    <li>When prompted, initialize all disks with MBR partition style → click OK.</li>
+
+    <li><strong>RAID 0: Striped Volume</strong>
+      <ul>
+        <li>Select Disk 1 → New Striped Volume.</li>
+        <li>Add Disk 2 → Next → Next.</li>
+        <li>Name volume: RAID0 (Striped).</li>
+        <li>Check “Perform a quick format” → Next → Finish → confirm prompt → wait.</li>
+      </ul>
+    </li>
+
+    <li><strong>RAID 1: Mirrored Volume</strong>
+      <ul>
+        <li>Select Disk 3 → New Mirrored Volume.</li>
+        <li>Add Disk 4 → Next → Next.</li>
+        <li>Name volume: RAID1 (Mirrored).</li>
+        <li>Check “Perform a quick format” → Next → Finish → confirm prompt → wait.</li>
+      </ul>
+    </li>
+
+    <li><strong>Spanned Volume</strong>
+      <ul>
+        <li>Select Disk 5 → New Spanned Volume.</li>
+        <li>Add Disk 6 and Disk 7 → Next → Next.</li>
+        <li>Name volume: Spanned.</li>
+        <li>Check “Perform a quick format” → Next → Finish → confirm prompt → wait.</li>
+      </ul>
+    </li>
+
+    <li><strong>RAID 5</strong>
+      <ul>
+        <li>Select Disk 8 → New RAID-5 Volume.</li>
+        <li>Add Disk 9 and Disk 10 → Next → Next.</li>
+        <li>Name volume: RAID5.</li>
+        <li>Check “Perform a quick format” → Next → Finish → confirm prompt → wait.</li>
+      </ul>
+    </li>
+  </ol>
 
     <!-- Example Video Embed -->
     <div class="ratio ratio-16x9 mt-4">

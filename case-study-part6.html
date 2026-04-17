@@ -85,12 +85,48 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="container mt-5 text-center">
-    <h1>Case Study Part 6</h1>
-    <p>
-      This section presents <strong>Case Study Part 6: Remote Desktop</strong>.  
-    </p>
+<!-- Main Content -->
+<main class="container mt-5 text-center">
+  <h1>Case Study Part 6</h1>
+  <p>
+    This section presents <strong>Case Study Part 6: Remote Desktop</strong>.  
+  </p>
+
+  <!-- Step-by-step list -->
+  <h3 class="mt-4">Steps</h3>
+  <ol class="text-start">
+    <li>Start Windows XP, Windows 7, and Windows Server 2008 VMs.</li>
+    <li>Open <strong>Active Directory Users & Computers</strong> and select <strong>Computers</strong>.</li>
+    <li>On Windows 7:
+      <ul>
+        <li>Go to Computer Properties → Remote Settings.</li>
+        <li>Check “Allow connections from computers running any version of Remote Desktop.”</li>
+        <li>Apply → OK.</li>
+      </ul>
+    </li>
+    <li>On Windows Server 2008:
+      <ul>
+        <li>Search for “Remote Desktop Connection.”</li>
+        <li>Type the name of your Windows 7 computer → Connect.</li>
+        <li>Enter password → Yes → wait.</li>
+        <li>A notification appears on Windows 7 VM → click OK.</li>
+        <li>Windows Server 2008 can now access Windows 7.</li>
+      </ul>
+    </li>
+    <li>On Windows XP:
+      <ul>
+        <li>Go to Computer Properties → Remote.</li>
+        <li>Ensure “Allow users to connect remotely” is checked.</li>
+      </ul>
+    </li>
+    <li>On Windows Server 2008:
+      <ul>
+        <li>Search for “Remote Desktop Connection.”</li>
+        <li>Type the name of your Windows XP computer → Connect → Yes.</li>
+        <li>Log off first in Windows XP before logging in via Windows Server 2008.</li>
+      </ul>
+    </li>
+  </ol>
 
     <!-- Example Video Embed -->
     <div class="ratio ratio-16x9 mt-4">

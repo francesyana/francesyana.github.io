@@ -85,12 +85,74 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="container mt-5 text-center">
-    <h1>Case Study Part 7</h1>
-    <p>
-      This section presents <strong>Case Study Part 7: Web Server</strong>.  
-    </p>
+<!-- Main Content -->
+<main class="container mt-5 text-center">
+  <h1>Case Study Part 7</h1>
+  <p>
+    This section presents <strong>Case Study Part 7: Web Server</strong>.  
+  </p>
+
+  <!-- Requirements -->
+  <h3 class="mt-4">Requirements</h3>
+  <ol class="text-start">
+    <li>Create a simple university website hosted on IIS 7.</li>
+    <li>Create a simple website for each department (subdirectories in the <code>wwwroot</code> folder).</li>
+  </ol>
+
+  <!-- Step-by-step list -->
+  <h3 class="mt-4">Steps</h3>
+  <ol class="text-start">
+    <li>Install Server Roles
+      <ul>
+        <li>Add the <strong>Web Server Role</strong>.</li>
+      </ul>
+    </li>
+
+    <li>Add Web Server Features
+      <ul>
+        <li>Application Development</li>
+        <li>IIS 6 Management Compatibility</li>
+        <li>FTP Server</li>
+      </ul>
+    </li>
+
+    <li>Create and Test Web Application
+      <ul>
+        <li>Download and install: <a href="https://anytoiso-converter.en.download.it/" target="_blank">AnyToISO Converter</a>.</li>
+        <li>Start → Administrative Tools → IIS Manager.</li>
+        <li>Expand domain name → Right click Sites → Add Website.</li>
+        <li>Site Name: <strong>tupt</strong></li>
+        <li>Physical Path: <code>C:\inetpub\wwwroot\tupt</code></li>
+        <li>Assigned Address: <strong>172.31.0.31</strong></li>
+        <li>Host Name: <strong>tupt.edu.ph</strong></li>
+      </ul>
+    </li>
+
+    <li>Configure Output Caching
+      <ul>
+        <li>Select site “tupt” → Output Caching.</li>
+        <li>Add file extension: <code>.aspx</code>.</li>
+        <li>Enable User Mode Caching.</li>
+      </ul>
+    </li>
+
+    <li>Add Content to Site
+      <ul>
+        <li>Go to <code>C:\inetpub\wwwroot</code>.</li>
+        <li>Move <code>iisstart.html</code> into the <code>tupt</code> folder.</li>
+        <li>Create subfolders for Academics, Administrative, and Department content.</li>
+        <li><code>iisstart.html</code> serves as the index file.</li>
+      </ul>
+    </li>
+
+    <li>Access Website
+      <ul>
+        <li>In IIS Manager → Sites → Browse “tupt”.</li>
+        <li>Website should open in Internet Explorer.</li>
+        <li>Test by typing <code>http://tupt.edu.ph/</code> in Internet Explorer on Windows XP and Windows 7 clients.</li>
+      </ul>
+    </li>
+  </ol>
 
     <!-- Example Video Embed -->
     <div class="ratio ratio-16x9 mt-4">

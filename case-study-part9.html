@@ -85,12 +85,54 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="container mt-5 text-center">
-    <h1>Case Study Part 9</h1>
-    <p>
-      This section presents <strong>Case Study Part 9: WDS</strong>.  
-    </p>
+<!-- Main Content -->
+<main class="container mt-5 text-center">
+  <h1>Case Study Part 9</h1>
+  <p>
+    This section presents <strong>Case Study Part 9: Windows Deployment Services (WDS)</strong>.  
+    In this activity, we add a Windows 7 image to WDS running on Windows Server 2008.
+  </p>
+
+  <!-- Step-by-step list -->
+  <h3 class="mt-4">Steps</h3>
+  <ol class="text-start">
+    <li>Prepare the ISO
+      <ul>
+        <li>Mount the Windows 7 ISO in your WS2008 VM.</li>
+        <li>Open Computer → right‑click the DVD drive → Open.</li>
+        <li>Copy all files from the DVD drive into a local folder: <code>C:\WDSImages\Win7</code>.</li>
+      </ul>
+    </li>
+
+    <li>Add the Install Image
+      <ul>
+        <li>Open Windows Deployment Services from Administrative Tools.</li>
+        <li>Expand your server → right‑click <strong>Install Images</strong> → Add Install Image.</li>
+        <li>Create a new image group: <strong>WIN7-AIO</strong>.</li>
+        <li>Browse to: <code>C:\WDSImages\Win7\sources\install.wim</code>.</li>
+        <li>Click Next → wait for import → Finish.</li>
+      </ul>
+    </li>
+
+    <li>Add the Boot Image
+      <ul>
+        <li>Right‑click <strong>Boot Images</strong> → Add Boot Image.</li>
+        <li>Browse to: <code>C:\WDSImages\Win7\sources\boot.wim</code>.</li>
+        <li>Name it: <strong>Win7 Boot</strong>.</li>
+        <li>Finish the wizard.</li>
+      </ul>
+    </li>
+
+    <li>Deploy Windows 7
+      <ul>
+        <li>Create a new VM in VirtualBox for Windows 7.</li>
+        <li>Set Network Boot (PXE) as the first boot option.</li>
+        <li>Start the VM → press <strong>F12</strong> when prompted.</li>
+        <li>WDS will load → enter credentials (Username and Password).</li>
+        <li>Select <strong>Windows 7 Ultimate</strong> → Next → Install.</li>
+      </ul>
+    </li>
+  </ol>
 
     <!-- Example Video Embed -->
     <div class="ratio ratio-16x9 mt-4">

@@ -85,12 +85,74 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="container mt-5 text-center">
-    <h1>Case Study Part 8</h1>
-    <p>
-      This section presents <strong>Case Study Part 8: Group Policy Management</strong>.  
-    </p>
+<!-- Main Content -->
+<main class="container mt-5 text-center">
+  <h1>Case Study Part 8</h1>
+  <p>
+    This section presents <strong>Case Study Part 8: Group Policy Management</strong>.  
+  </p>
+
+  <!-- Requirements -->
+  <h3 class="mt-4">Requirements</h3>
+  <ol class="text-start">
+    <li>Each department should have its own desktop wallpaper.</li>
+    <li>Restrict/disable specific features and enforce security policies using Group Policy Objects (GPOs).</li>
+  </ol>
+
+  <!-- Step-by-step list -->
+  <h3 class="mt-4">Steps</h3>
+  <ol class="text-start">
+    <li>Create Department Wallpapers
+      <ul>
+        <li>Create a GPO → Academic Wallpaper.</li>
+        <li>User Configuration → Policies → Administrative Templates → Desktop → Desktop Wallpaper.</li>
+        <li>Edit → Enable → specify wallpaper path → Apply → OK.</li>
+        <li>Repeat for each department with its own wallpaper.</li>
+      </ul>
+    </li>
+
+    <li>Create GPOs for Restrictions
+      <ul>
+        <li>Domain GPOs: <strong>Users Policy</strong> and <strong>Admin Policy</strong>.</li>
+      </ul>
+    </li>
+
+    <li>Users Policy Settings
+      <ul>
+        <li>Prohibit access to Control Panel and PC settings.</li>
+        <li>Do not store LAN Manager hash value on next password change.</li>
+        <li>Prevent access to the command prompt.</li>
+        <li>No auto-restart with logged-on users for scheduled updates.</li>
+        <li>Deny access to all removable storage classes.</li>
+        <li>Prohibit user installs.</li>
+        <li>Disable guest account status.</li>
+        <li>Minimum password length: 12 characters.</li>
+        <li>Maximum password age: 42 days.</li>
+        <li>Audit directory service access (success).</li>
+        <li>Account lockout duration: 30 minutes.</li>
+        <li>Account lockout threshold: 3 invalid attempts.</li>
+        <li>Reset account lockout counter after 30 minutes.</li>
+        <li>Remove links/access to Windows Update.</li>
+        <li>Remove network connections from Start Menu.</li>
+        <li>Remove Help menu from Start Menu.</li>
+        <li>Remove Run menu from Start Menu.</li>
+        <li>Remove My Pictures icon from Start Menu.</li>
+        <li>Remove My Music icon from Start Menu.</li>
+        <li>Remove My Network Places icon from Start Menu.</li>
+        <li>Add Logoff option to Start Menu.</li>
+        <li>Remove Task Manager from Ctrl+Alt+Del.</li>
+        <li>Set Internet Explorer browser title bar text to domain name.</li>
+        <li>Prohibit access to LAN connection properties.</li>
+        <li>Prevent access to registry editing tools.</li>
+      </ul>
+    </li>
+
+    <li>Admin Policy Settings
+      <ul>
+        <li>Apply opposite settings where required (e.g., if enabled in User Policy, disable in Admin Policy).</li>
+      </ul>
+    </li>
+  </ol>
 
     <!-- Example Video Embed -->
     <div class="ratio ratio-16x9 mt-4">
