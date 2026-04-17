@@ -85,12 +85,86 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="container mt-5 text-center">
-    <h1>Case Study Part 4</h1>
-    <p>
-      This section presents <strong>Case Study Part 4: File Server</strong>.  
-    </p>
+<!-- Main Content -->
+<main class="container mt-5 text-center">
+  <h1>Case Study Part 4</h1>
+  <p>
+    This section presents <strong>Case Study Part 4: File Server</strong>.  
+  </p>
+
+  <!-- Step-by-step list -->
+  <h3 class="mt-4">Requirements</h3>
+  <ol class="text-start">
+    <li>All departments/sections should have one public folder (read/write). Domain users cannot access other department folders.</li>
+    <li>A university public folder where all domain users can access (read/write).</li>
+    <li>An installer folder containing applications that only the administrator can access.</li>
+    <li>All folders except the Computer Engineering folder should contain only office documents (.ppt, .doc, .docx, .xls, .pptx, .pdf, etc.).</li>
+    <li>Information Technology folder should contain all files except executable files.</li>
+    <li>The storage quota for each folder is 1GB.</li>
+    <li>Map the shared folder for each client workstation.</li>
+  </ol>
+
+  <h3 class="mt-4">Steps</h3>
+  <ol class="text-start">
+    <li>Create Folders
+      <ul>
+        <li>Create directories from Part 2 of this case study, plus University and Installer folders.</li>
+        <li>You may also run a script to automate folder creation.</li>
+      </ul>
+    </li>
+
+    <li>Configure File Services
+      <ul>
+        <li>Add roles → File Services → Next → Next.</li>
+        <li>Check all except Windows Server 2003 File Services → Next.</li>
+        <li>DFS Namespaces: NameSpace1 → Next → Next.</li>
+        <li>In credentials, select domain admin username and password → Next → Next.</li>
+        <li>Select local disk → Next until Install → Restart.</li>
+      </ul>
+    </li>
+
+    <li>Quota Management
+      <ul>
+        <li>Start → Administrative Tools → File Service Resource Manager → Quota Management.</li>
+        <li>Quota Templates → Create new quota template.</li>
+        <li>Template Name: 1GB → Space Limit: 1GB → Add.</li>
+      </ul>
+    </li>
+
+    <li>File Screening Management
+      <ul>
+        <li><strong>General:</strong> Read/Write, Users: All, Files: Only office documents, File Screen Template: General.</li>
+        <li><strong>IT:</strong> Read/Write, Users: Information Technology, File Screen Template: Block Executable Files.</li>
+      </ul>
+    </li>
+
+    <li>Provision Shared Folders
+      <ul>
+        <li>Administrative Tools → Server Manager → Roles → File Services → Share and Storage Management.</li>
+        <li>Create Provision Share → Shared Folder Provision Wizard.</li>
+        <li>Select folder location → Available volumes → C Drive → Next.</li>
+        <li>Check SMB → Next → Configure SMB permissions based on requirements.</li>
+        <li>Apply quota → Apply file screen template → Finish.</li>
+      </ul>
+    </li>
+
+    <li>University Folder
+      <ul>
+        <li>Permissions: Read/Write</li>
+        <li>Users: All Domain Users</li>
+        <li>File Screen Template: General</li>
+      </ul>
+    </li>
+
+    <li>Installer Folder
+      <ul>
+        <li>SMB Share Name: Installer$</li>
+        <li>Permissions: Read/Write</li>
+        <li>Users: Admin only</li>
+        <li>File Screen Template: General</li>
+      </ul>
+    </li>
+  </ol>
 
     <!-- Example Video Embed -->
     <div class="ratio ratio-16x9 mt-4">
