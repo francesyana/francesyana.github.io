@@ -93,36 +93,33 @@
       Watch the instructional video below to follow along with the process.
     </p>
 
+    <!-- Background -->
+    <h3 class="mt-4">About Windows 95</h3>
+    <p class="text-start">
+      Windows 95 is a major consumer-oriented operating system released by Microsoft on August 24, 1995, 
+      marking a significant evolution in personal computing. It merged MS-DOS and Windows into a single 
+      32-bit product, introducing the iconic Start menu, taskbar, and desktop shortcuts. It was renowned 
+      for its user-friendly interface, "Plug and Play" capabilities, and internet readiness.
+    </p>
+
+    <!-- Resources -->
+    <h3 class="mt-4">Resources</h3>
+    <ul class="text-start">
+      <li><strong>Floppy Disk:</strong> <a href="https://winworldpc.com/download/db57f85a-f039-11e7-a562-fa163e9022f0" target="_blank">Download here</a></li>
+      <li><strong>Windows 95 ISO:</strong> <a href="https://winworldpc.com/download/df61214c-cca9-11e7-a73f-fa163e9022f0" target="_blank">Download here</a></li>
+      <li><strong>Product Key:</strong> 12095-0004226-12233</li>
+    </ul>
+
     <!-- Step-by-step list -->
     <h3 class="mt-4">Steps</h3>
     <ol class="text-start">
-      <li>Create new VM for Windows 95.</li>
-      <li>Add floppy disk and ISO in Settings → Storage.</li>
-      <li>Start Win95 VM.</li>
-      <li>Select 1 → type <code>fdisk</code> → Yes (Y) → select 1 → select 1 → Yes (Y) → Restart VM.</li>
-      <li>Select 1 → type <code>format C:</code> → Yes (Y) → Enter → type <code>C:</code> → <code>mkdir WIN95</code> → <code>cd WIN95</code> → <code>copy D:\WIN95</code>.</li>
-      <li>After copying files, right-click the disk icon at the bottom → Remove Disk from Virtual Drive.</li>
-      <li>Type <code>setup</code> → Enter → Continue → Yes.</li>
-      <li>In setup options, select Typical.</li>
-      <li>Enter product key.</li>
-      <li>For company & name, type anything (e.g., "EndUser") → Next → Next → wait.</li>
-      <li>Press Next → choose No in Startup Disk options → Next → Finish.</li>
-      <li>Warning tab appears → bottom disk icon → Remove Disk from Virtual Drive.</li>
-      <li>Click OK to restart the computer.</li>
-      <li>If error appears: add ISO file in Disk Icon → use WIN95 ISO.</li>
-      <li>Click Machine → Reset → press any key → click No → press any key to install.</li>
-      <li>After install, remove disk again in Disk Icon.</li>
-      <li>Click Machine → Reset.</li>
-      <li>After restart, choose 1.</li>
-      <li>Windows 95 setup continues properly.</li>
-      <li>Network tab appears → click OK.</li>
-      <li>Computer name: "EndUser".</li>
-      <li>Workgroup: "WORKGROUP" → Enter.</li>
-      <li>If version conflict tab appears → click Yes.</li>
-      <li>Date/Time Properties → set Timezone +8:00 → Apply → OK.</li>
-      <li>If Printer Wizard appears → Cancel → Restart when prompted.</li>
-      <li>After restart, create username & password (e.g., "Admin" / "Admin12345").</li>
-      <li>Windows 95 setup continues → Next → install Internet Explorer 4.0 → wait for finish.</li>
+      <li>Open VirtualBox and click <strong>New</strong>.</li>
+      <li>Name the VM <strong>Windows 95</strong> and set type to <strong>Windows</strong>.</li>
+      <li>Allocate <strong>64–128MB RAM</strong>.</li>
+      <li>Create a <strong>2GB virtual hard disk (VDI)</strong>.</li>
+      <li>Mount the Windows 95 ISO in <strong>Storage settings</strong>.</li>
+      <li>Start the VM and follow the <strong>Windows Setup Wizard</strong>.</li>
+      <li>Complete installation and restart the VM.</li>
     </ol>
 
     <div class="ratio ratio-16x9 mt-4">
