@@ -88,12 +88,41 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="container mt-5 text-center">
-    <h1>Windows 7 Installation</h1>
-    <p>
-      This section provides a step-by-step demonstration of installing Windows 7. 
+  <main class="container mt-5">
+    <h1 class="text-center">Windows 7 Installation</h1>
+    <p class="text-center">
+      This section provides a step-by-step demonstration of installing Windows 7.  
       Watch the instructional video below to follow along with the process.
     </p>
+
+    <!-- Background -->
+    <h3 class="mt-4">About Windows 7</h3>
+    <p class="text-start">
+      Windows 7 is a major release of the Microsoft Windows NT operating system, released in October 2009 
+      as the successor to Windows Vista. Known for its improved stability, faster performance, and refined 
+      Aero user interface, it became a highly popular OS. Support officially ended on January 14, 2020.
+    </p>
+
+    <!-- Resources -->
+    <h3 class="mt-4">Resources</h3>
+    <ul class="text-start">
+      <li><strong>Windows 7 ISO:</strong> <a href="https://archive.org/details/win-7-pro-32-64-iso" target="_blank">Download here</a></li>
+      <li><strong>Product Key:</strong> (Insert valid Windows 7 product key here)</li>
+    </ul>
+
+    <!-- Steps -->
+    <h3 class="mt-4">Steps</h3>
+    <ol class="text-start">
+      <li>Create a new VirtualBox VM and select <strong>Windows 7</strong> as the version.</li>
+      <li>Allocate <strong>2GB RAM</strong> to the VM.</li>
+      <li>Create a <strong>40GB virtual hard disk</strong>.</li>
+      <li>Mount the Windows 7 ISO file in the VM’s Storage settings.</li>
+      <li>Start the VM and boot from the ISO.</li>
+      <li>Follow the installation wizard prompts to configure language, keyboard, and region.</li>
+      <li>Enter product key, computer name, and user account details.</li>
+      <li>Allow setup to copy files and restart automatically.</li>
+      <li>Once installation is complete, log in and install <strong>Guest Additions</strong> for better performance and integration.</li>
+    </ol>
 
     <div class="ratio ratio-16x9 mt-4">
       <iframe src="https://www.youtube.com/embed/zNwx6Fp5qJo?si=yyCMLwxqSxGcbgPK"
